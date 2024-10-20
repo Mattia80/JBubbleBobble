@@ -60,6 +60,7 @@ public class GameManager implements Runnable {
 		this.gamePanel = new GamePanel(this);
 		this.initClasses();
 		new GameWindow(this.gamePanel);
+		this.gamePanel.setFocusable(true);
 		this.gamePanel.requestFocus();
 	}
 
