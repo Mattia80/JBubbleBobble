@@ -10,7 +10,7 @@ import model.AbstractEntity;
 import static utility.GameConstants.UserInterface.DEFAULT_FONT_SIZE;;
 
 /**
- * Classe che racchiude metodi statici di utilità pre le varie componenti del
+ * Classe che racchiude metodi statici di utilita' per le varie componenti del
  * gioco
  */
 public class HelpMethods {
