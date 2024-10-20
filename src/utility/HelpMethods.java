@@ -65,6 +65,14 @@ public class HelpMethods {
 		return false;
 	}
 
+	/**
+	 * Metodo statico per determinare se il giorcatore o un nemico sono su una
+	 * superficie solida
+	 * 
+	 * @param entity     entita' da esaminare
+	 * @param levelTiles matrice di booleani che rappresnetano il livello corrente
+	 * @return true se l'entita' è su una superficie solida, false altrimenti
+	 */
 	public static boolean isEntityOnFloor(AbstractEntity entity, boolean[][] levelTiles) {
 		boolean result = true;
 		if (!isSolid(entity.getX(), entity.getY() + entity.getHeight() + 1, levelTiles)) {
@@ -76,10 +84,29 @@ public class HelpMethods {
 		return result;
 	}
 
+	/**
+	 * Metodo statico per scrivere il testo sul menu e nelle schermate di gioco
+	 * 
+	 * @param g        oggetto di tipo Graphics
+	 * @param text     testo da visualizzare
+	 * @param x        coordinata x del testo
+	 * @param y        coordinata y del testo
+	 * @param centered booleano che indica se il testo deve essere centrato
+	 */
 	public static void writeText(Graphics g, String text, int x, int y, boolean centered) {
 		writeText(g, text, x, y, DEFAULT_FONT_SIZE, centered);
 	}
 
+	/**
+	 * Metodo statico per scrivere il testo sul menu e nelle schermate di gioco
+	 * 
+	 * @param g        oggetto di tipo Graphics
+	 * @param text     testo da visualizzare
+	 * @param x        coordinata x del testo
+	 * @param y        coordinata y del testo
+	 * @param fontSize dimensione del testo
+	 * @param centered booleano che indica se il testo deve essere centrato
+	 */
 	public static void writeText(Graphics g, String text, int x, int y, int fontSize, boolean centered) {
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setColor(Color.WHITE);
@@ -93,6 +120,12 @@ public class HelpMethods {
 		g2.drawString(text, x, y);
 	}
 
+	/**
+	 * Metodo statico che ritorna true se il valore e' numerico
+	 * 
+	 * @param str stringa da controllare
+	 * @return true se il valore e' numerico, false altrimenti
+	 */
 	public static boolean isNumeric(String str) {
 		try {
 			Double.parseDouble(str);
@@ -102,6 +135,14 @@ public class HelpMethods {
 		}
 	}
 
+	/**
+	 * Metodo statico che ritorna true se due entita' si stanno scontrando, false
+	 * altrimenti
+	 * 
+	 * @param e1 entita' 1
+	 * @param e2 entita' 2
+	 * @return true se due entita' si stanno scontrando, false altrimenti
+	 */
 	public static boolean areEntitiesTouching(AbstractEntity e1, AbstractEntity e2) {
 		// Ottieni le coordinate e le dimensioni dei rettangoli delle due entità
 		float x1 = e1.getX();
