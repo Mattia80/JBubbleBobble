@@ -1,0 +1,18 @@
+XX                      XX
+XL   I            I     XX
+XX   XX           XX    XX
+XX    1           1     XX
+XX  I    I     I    I   XX
+XX  XXXXXXX   XXXXXXXX  XX
+XX                      XX
+XX    I                 XX
+XX  XXX   X   X    XXX  XX
+XX   0             0    XX
+XX                   I  XX
+XX  XXX   X   X    XXX  XX
+XX                      XX
+XX    I            I    XX
+XX  XXXXXXX   XXXXXXXX  XX
+XXS                     XX
+PR       I    I         XX
+XXXXXXXXXXXXXXXXXXXX    XX
