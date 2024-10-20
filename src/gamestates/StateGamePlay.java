@@ -422,6 +422,9 @@ public class StateGamePlay extends AbstractGameState implements StateInterface {
 		case KeyEvent.VK_D:
 			this.playerController.updateDir(RIGHT, false);
 			break;
+		case KeyEvent.VK_SPACE:
+			this.playerController.getPlayer().setJump(false);
+			break;
 		}
 	}
 

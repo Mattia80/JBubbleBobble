@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.geom.Rectangle2D;
 
 import model.AbstractEntity;
 import static utility.GameConstants.UserInterface.DEFAULT_FONT_SIZE;;
@@ -57,9 +58,9 @@ public class HelpMethods {
 	 */
 	public static boolean canMoveHere(float x, float y, int width, int height, boolean[][] levelTiles) {
 		if (!isSolid(x, y, levelTiles))
-			if (!isSolid(x + width, y + height - 4, levelTiles))
+			if (!isSolid(x + width, y + height - 3, levelTiles))
 				if (!isSolid(x + width, y, levelTiles))
-					if (!isSolid(x, y + height - 4, levelTiles))
+					if (!isSolid(x, y + height - 3, levelTiles))
 						return true;
 
 		return false;
@@ -165,5 +166,6 @@ public class HelpMethods {
 		// entità si stanno toccando
 		return overlapX && overlapY;
 	}
-
+	
+	
 }

@@ -194,12 +194,12 @@ public class PlayerController extends AbstractController {
 
 		player.setMoving(false);
 
+		if (player.isJump())
+			this.jump();
+
 		if (!HelpMethods.isEntityOnFloor(player, level)) {
 			player.setInAir(true);
 		}
-
-		if (player.isJump())
-			this.jump();
 
 		if (!player.isLeft() && !player.isRight() && !player.isInAir()) {
 			return;
@@ -226,8 +226,8 @@ public class PlayerController extends AbstractController {
 		}
 
 		if (player.isInAir()) {
-			boolean canMove = HelpMethods.canMoveHere(player.getX(), player.getY() + player.getAirSpeed(), player.getWidth(),
-					player.getHeight(), level);
+			boolean canMove = HelpMethods.canMoveHere(player.getX(), player.getY() + player.getAirSpeed(),
+					player.getWidth(), player.getHeight(), level);
 			if (canMove || player.isJump()) {
 				if (player.getY() + player.getAirSpeed() > player.getY()) {
 					player.setJump(false);
@@ -251,6 +251,7 @@ public class PlayerController extends AbstractController {
 			}
 		} else {
 			this.updateXPosition(xSpeed);
+
 		}
 
 		player.setMoving(true);
